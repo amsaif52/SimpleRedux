@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: "./src/MainApp",
@@ -19,5 +20,8 @@ module.exports = {
   },
   resolve: {
 		extensions: ['', '.js', '.jsx']
-	}
+	},
+  plugins:[
+    new HtmlWebpackPlugin({template: './index.html'})
+  ]
 }
