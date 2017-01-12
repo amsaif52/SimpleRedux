@@ -3,12 +3,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: "./src/MainApp",
+  entry: [
+  "./src/MainApp"
+  ],
   output:{
     filename: 'bundle.js',
     path: __dirname+'/dist',
     publicPath: '/dist/'
   },
+  devtool: 'source-map',
   module:{
     loaders:[
       {
